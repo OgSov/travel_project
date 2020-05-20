@@ -1,0 +1,291 @@
+body{
+    color: white;
+    font-family:'Poppins', sans-serif 'Font Awesome';
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.text{
+    text-transform: uppercase;
+}
+#main{
+    background-image: url(https://i.picsum.photos/id/419/1920/1080.jpg);
+    /* background-color: #999; */
+    display: grid;
+    grid-template-rows: 90px 50vh 70vh;
+    /* grid-template-columns: auto; */
+    width: 100vw;
+    height: 143vh;
+}
+
+/* ----SPACE---- */
+
+.white{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+/* -------SPACE----- */
+
+/* -------USER NAVIGATION BAR--------------------------------------- */
+#main .user_nav{
+    /* margin-top: 50px; */
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+#main .user_nav li{
+    margin: 10px 30px;
+}
+
+.user_nav .currency{
+    position: relative;
+    cursor: pointer;
+    margin-left: 7.3em;
+}
+.currency .default_currency::before{
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    border-color: transparent transparent black black;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+}
+.currency .select_currency{
+    position: absolute;
+    display: none;
+}
+.currency .select_currency li{
+    cursor: pointer;
+}
+.currency.active .select_currency{
+    display: block;
+}
+.currency.active .default_currency::before{
+    transform: rotate(-225deg);
+    top: 15px;
+    transition: 0.2s;
+}
+
+.user_nav .lang{
+    position: relative;
+    cursor: pointer;
+}
+.lang .default_lang::before{
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    border-color: transparent transparent black black;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+}
+.lang .select_lang{
+    position: absolute;
+    display: none;
+}
+.lang .select_lang li{
+    cursor: pointer;
+}
+.lang.active .select_lang{
+    display: block;
+}
+.lang.active .default_lang::before{
+    transform: rotate(-225deg);
+    top: 15px;
+    transition: 0.2s;
+}
+
+#main .user_nav_right{
+    display: flex;
+}
+#main .user_nav_right li{
+    position: absolute;
+}
+#main .user_nav_right #cart{
+    right: 24em;
+}
+#main .user_nav_right #log{
+    right: 18em;
+}
+#main .user_nav_right #reg{
+    right: 12em;
+}
+
+/* --------MAIN NAVIGATION BAR------------------------------ */
+#compas{
+    width: 70px;
+    height: 70px;
+}
+#main .main_nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75vw;
+    margin-left: 9em;
+}
+#main .main_nav h1 {
+    padding: 5px 0 0 0;
+}
+#main .main_nav h1 span{
+    padding: 20px 0;
+    font-size: 1.2em;
+}
+#main .main_nav h1 small{
+    font-size: 0.7em;
+}
+#main .main_nav h1 span, small{
+    display: inline-block;
+    vertical-align: top;
+}
+/* ----- SECTION ----------------------------------------- */
+#main .header_content section{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+#main .header_content h2, p{
+    text-align: center;
+}
+#main .header_content h2{
+    font-size: 5em;
+    color: black;
+    padding: 0 55px;
+}
+#main .header_content p{
+    font-size: 1.5em;
+    color: black;
+    padding: 100px;
+}
+
+/* ------FILTERS----------------------------------------- */
+.filters{
+    width: 60vw;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3em;
+}
+
+/* ---------ADVENTURE---------- */
+
+.filters .filter_adventure ul li{
+    text-transform: none;
+    padding: 8px 5px;
+    text-align: left;
+    color: black;
+}
+
+.filters .filter_adventure{
+    position: relative;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.filter_adventure .default_adventure::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    border-color: transparent transparent black black;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+}
+.filter_adventure .select_adventure{
+    position: absolute;
+    display: none;
+}
+.filter_adventure .select_adventure li{
+    cursor: pointer;
+}
+.filter_adventure.active .select_adventure{
+    display: block;
+}
+.filter_adventure.active .default_adventure::before{
+    transform: rotate(-225deg);
+    top: 15px;
+    transition: 0.2s;
+}
+
+/* --------DESTINATION--------- */
+
+.filter_destination ul li{
+    /* border: 1px solid black;
+    background-color: rgba(27, 23, 23, 0.4); */
+    /* margin: 1px; */
+    /* width: 200px; */
+    /* height: 20px; */
+    text-transform: none;
+    padding: 8px 5px;
+    text-align: left;
+    color: black;
+}
+.filters .filter_destination{
+    position: relative;
+    cursor: pointer;
+}
+.filter_destination .default_destination::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    border-color: transparent transparent black black;
+    transform: rotate(-45deg);
+}
+.filter_destination .select_destination{
+    position: absolute;
+    display: none;
+}
+.filter_destination .select_destination li{
+    cursor: pointer;
+}
+.filter_destination.active .select_destination{
+    display: block;
+}
+.filter_destination.active .default_destination::before{
+    transform: rotate(-225deg);
+    top: 15px;
+}
+
+/* -------------------FILTER DATE----------------------- */
+.filters .filter_date{
+    position: relative;
+    cursor: pointer;
+    margin: 0 30px;
+    padding: 8px 5px;
+    color: black;
+    text-transform: none;
+}
+
+/* ------------SEARCH BUTTON------------- */
+#search_button{
+    /* position: absolute; */
+    background: none;
+    color: black;
+    border: 1px solid black;
+    overflow: hidden;
+    width: 100px;
+    height: 30px;
+    margin-left: 3em;
+    /* left: 500px; */
+}
+#search_button:focus{
+    outline: 1px solid gray;
+}
+
+

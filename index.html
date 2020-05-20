@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Travel</title>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- -------CURRENCY------- -->
+    <script>
+        $(document).ready(function(){
+            $('.default_currency').click(function(){
+                $(this).parent().toggleClass('active');
+            })
+            $('.select_currency li').click(function(){
+                var currentele = $(this).html();
+                $('.default_currency li').html(currentele);
+                $(this).parents('.currency').removeClass('active');
+            })
+        });
+    </script>
+    <!-- -------LANGUAGE------- -->
+    <script>
+        $(document).ready(function(){
+            $('.default_lang').click(function(){
+                $(this).parent().toggleClass('active');
+            })
+            $('.select_lang li').click(function(){
+                var currentele = $(this).html();
+                $('.default_lang li').html(currentele);
+                $(this).parents('.lang').removeClass('active');
+            })
+        });
+    </script>
+    <!-- -------FILTER_ADVENTURE------- -->
+    <script>
+        $(document).ready(function(){
+            $('.default_adventure').click(function(){
+                $(this).parent().toggleClass('active');
+            })
+            $('.select_adventure li').click(function(){
+                var currentele = $(this).html();
+                $('.default_adventure li').html(currentele);
+                $(this).parents('.filter_adventure').removeClass('active');
+            })
+        });
+    </script>
+    <!-- ------FILTER_DESTINATION------- -->
+    <script>
+        $(document).ready(function(){
+            $('.default_destination').click(function(){
+                $(this).parent().toggleClass('active');
+            })
+            $('.select_destination li').click(function(){
+                var currentele = $(this).html();
+                $('.default_destination li').html(currentele);
+                $(this).parents('.filter_destination').removeClass('active');
+            })
+        });
+    </script>
+
+</head>
+<body>
+    
+    <header id="main">
+        <nav class="user_nav">
+            
+                <div class="currency">
+                    <ul class="default_currency">
+                        <li>USD</li>
+                    </ul>
+                    <ul class="select_currency">
+                        <li>USD</li>
+                        <li>EUR</li>
+                        <li>MDL</li>
+                    </ul>
+                </div>
+
+                <div class="lang">
+                    <ul class="default_lang">
+                        <li>EN</li>
+                    </ul>
+                    <ul class="select_lang">
+                        <li>EN</li>
+                        <li>RU</li>
+                        <li>RO</li>
+                    </ul>
+                </div>
+
+            <ul class="user_nav_right"> 
+                <li id="cart"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                <li id="log"><a href="">Sign In</a></li>
+                <li id="reg"><a href="">Register</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="text main_nav">
+                <h1><a href=""><img id="compas" src="compass.png" alt=""><span>Adventures<br><small>the great Adventure people</small></span></a></h1>
+                <li><a href="">home</a></li>
+                <li><a href="">destinations</a></li>
+                <li><a href="">travel styles</a></li>
+                <li><a href="">specials</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </nav>
+        <div class="text header_content">
+            <section >
+                <h2>travel styles</h2>
+                <p>the right tour for the right <span>traveller</span></p>
+            </section>
+            <div class="filters">
+                <div class="filter_adventure">
+                    <ul class="default_adventure">
+                        <li>Select Adventure</li>
+                    </ul>
+                    <ul class="select_adventure">
+                        <li>Family</li>
+                        <li>Polar</li>
+                        <li>Wildlife</li>
+                        <li>Food</li>
+                        <li>Urban</li>
+                        <li>Sailing</li>
+                        <li>Mountain</li>
+                        <li>Climbing</li>
+                    </ul>
+                </div>
+                <div class="filter_destination">
+                    <ul class="default_destination">
+                        <li>Select Your Destination</li>
+                    </ul>
+                    <ul class="select_destination">
+                        <li>North America</li>
+                        <li>South America</li>
+                        <li>Africa</li>
+                        <li>Europe</li>
+                        <li>Asia</li>
+                        <li>Ocenia</li>
+                        <li>Antarctica</li>
+                    </ul>
+                </div>
+                <div class="filter_date">
+                    <ul>
+                        <li>Select Date</li>
+                    </ul>
+                </div>
+                <div>
+                    <button id="search_button">Search</button>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <section class="white">
+        
+    </section>
+
+
+</body>
+</html>
